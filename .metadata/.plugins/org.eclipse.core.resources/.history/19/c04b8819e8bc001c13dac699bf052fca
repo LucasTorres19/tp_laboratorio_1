@@ -7,24 +7,18 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "entrada.h"
 #include "funciones.h"
+#include "salida.h"
 
 int main(void) {
 
 	setbuf(stdout,NULL);
 
-	//declaracion de variables
-	int km = 0;
-	//float precioAerolineas = 0;
-	//float precioLatam = 0;
+	printf("| Agencia De Vuelo |\n");
 
-	printf("Agencia De Vuelo \n");
 
-	//obtener kilometros
-
-	km = obtenerKm();
-
-	printf(&km);
 
 	return EXIT_SUCCESS;
 }

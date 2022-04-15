@@ -8,6 +8,6 @@
 #ifndef SALIDA_H_
 #define SALIDA_H_
 
-
+void menu();
 
 #endif /* SALIDA_H_ */

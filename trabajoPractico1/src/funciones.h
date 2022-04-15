@@ -12,6 +12,6 @@ float descuentoTarjeta(float precio);
 float interesCredito(float precio);
 float obtenerBitcoin(float precio);
 float obtenerUnidad(float precio , int km);
-float diferenciaPrecio(float precio1 , float precio2):
+float diferenciaPrecio(float precio1 , float precio2);
 
 #endif /* FUNCIONES_H_ */
