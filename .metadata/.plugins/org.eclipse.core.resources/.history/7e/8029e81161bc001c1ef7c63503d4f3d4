@@ -1,0 +1,25 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 14 abr. 2022
+ *      Author: Lucas Torres Ezequiel
+ */
+
+
+float descuentoTarjeta(float precio){
+
+	float descuento = 0;
+	float resultado = 0;
+
+	//aplicamos el 10% de descuento.
+	descuento = (precio * 10) / 100;
+
+	resultado = precio - descuento;
+
+	return resultado;
+
+}
+
+float interesCredito(float precio){
+
+}

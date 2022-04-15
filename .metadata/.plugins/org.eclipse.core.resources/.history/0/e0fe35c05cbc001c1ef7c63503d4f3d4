@@ -1,0 +1,26 @@
+/*
+ ============================================================================
+ Name        : trabajoPractico1.c
+ Author      : Lucas Torres Ezequiel
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	//declarando variables.
+	int km;
+
+	printf("Agencia De Vuelo \n");
+
+	km = obtenerKm();
+
+	printf("%i\n", km);
+
+	return EXIT_SUCCESS;
+}

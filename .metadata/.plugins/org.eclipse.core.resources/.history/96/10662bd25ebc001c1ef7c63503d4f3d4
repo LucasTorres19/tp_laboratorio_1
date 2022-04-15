@@ -1,0 +1,17 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 14 abr. 2022
+ *      Author: Lucas Torres Ezequiel
+ */
+
+
+float tarjetaCredito(float precio){
+
+	float descuento;
+
+	descuento = precio % 10;
+
+}
+
+

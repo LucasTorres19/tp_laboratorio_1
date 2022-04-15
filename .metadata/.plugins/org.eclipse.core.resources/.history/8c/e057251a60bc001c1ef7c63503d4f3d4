@@ -1,0 +1,27 @@
+/*
+ * funciones.c
+ *
+ *  Created on: 14 abr. 2022
+ *      Author: Lucas Torres Ezequiel
+ */
+
+
+float descuentoTarjeta(float precio){
+
+	float descuento;
+	float resultado;
+
+	printf("a %f\n",precio);
+
+	//aplicamos el 10% de descuento.
+	descuento = precio * (10 / 100);
+
+	resultado = precio - descuento;
+
+	printf("b %f\n",resultado);
+
+	return resultado;
+
+}
+
+

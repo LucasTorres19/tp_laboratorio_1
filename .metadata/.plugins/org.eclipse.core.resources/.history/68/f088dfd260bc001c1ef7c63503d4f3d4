@@ -1,0 +1,16 @@
+/*
+ * pedirDatos.h
+ *
+ *  Created on: 14 abr. 2022
+ *      Author:  Ezequiel
+ */
+
+#ifndef PEDIRDATOS_H_
+#define PEDIRDATOS_H_
+
+int obtenerKm();
+float obtenerAerolineas();
+float obtenerLatam();
+
+
+#endif /* PEDIRDATOS_H_ */
