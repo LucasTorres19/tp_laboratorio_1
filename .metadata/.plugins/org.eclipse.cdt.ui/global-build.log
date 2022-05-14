@@ -1,4 +1,10 @@
-15:36:41 **** Incremental Build of configuration Debug for project trabajoPractico1 ****
+18:57:15 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\salida.o" "..\\src\\salida.c" 
-gcc -o trabajoPractico1.exe "src\\entrada.o" "src\\funciones.o" "src\\salida.o" "src\\trabajoPractico1.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayPassenger.o" "..\\src\\ArrayPassenger.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salida.o" "..\\src\\Salida.c" 
+gcc -o TrabajoPractico2.exe "src\\ArrayPassenger.o" "src\\Salida.o" "src\\TrabajoPractico2.o" "src\\extraFunctions.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file TrabajoPractico2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:57:26 **** Incremental Build of configuration Debug for project TrabajoPractico2 ****
+Info: Internal Builder is used for build
+gcc -o TrabajoPractico2.exe "src\\ArrayPassenger.o" "src\\Salida.o" "src\\TrabajoPractico2.o" "src\\extraFunctions.o" 
