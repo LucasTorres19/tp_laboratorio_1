@@ -30,8 +30,10 @@ int main()
     //creando la linkedlist
     LinkedList* listaPasajeros = ll_newLinkedList();
 
+
     printf("|Aerolineas| \n");
 
+    do{
         printf("1.Cargar los datos de los pasajeros desde el archivo(txt)\n"
                 "2.Cargar los datos de los pasajeros desde el archivo(bin)\n"
                 "3.Alta de pasajero.\n"
@@ -48,13 +50,19 @@ int main()
         getInt(&option,"ingrese una opcion:","Error. ingrese nuevamente la opcion.\n",1,10);
 
 
-    do{
+
         switch(option)
         {
             case 1:
                 controller_loadFromText("data.csv",listaPasajeros);
                 break;
+            case 6:
+            	controller_ListPassenger(listaPasajeros);
+            	break;
         }
+
+
+
     }while(option != 10);
     return 0;
 }

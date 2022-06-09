@@ -1,3 +1,9 @@
+/*
+ * Passenger.c
+ *
+ *  Created on: 9 jun. 2022
+ *      Author: liqui
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,7 +19,6 @@ typedef struct
 	char statusflight[50];
 
 }Passenger;
-
 
 Passenger* Passenger_new(){
 
@@ -234,10 +239,38 @@ Passenger* Passenger_newParametros(char* idStr,char* nombreStr,char* apellidoStr
 			Passenger_setstatusflight(newPassenger,statusflightStr)
 
 		){
-			free(newPassenger);
+			return newPassenger;
+		}else{
 			newPassenger = NULL;
 		}
 	}
 
 	return newPassenger;
+}
+
+void Passenger_print(Passenger* this){
+
+	int id;
+	float precio;
+	char nombre[50];
+	char apellido[50];
+	char tipoPasajero[50];
+	char codigoVuelo[50];
+	char statusFlight[50];
+
+
+	Passenger_getId(this,&id);
+	Passenger_getNombre(this,nombre);
+	Passenger_getApellido(this,apellido);
+	Passenger_getPrecio(this,&precio);
+	Passenger_getTipoPasajero(this,tipoPasajero);
+	Passenger_getCodigoVuelo(this,codigoVuelo);
+	Passenger_getstatusflight(this,statusFlight);
+
+
+	printf("%d %s %s %.2f %s %s %s",id,nombre,apellido,precio,tipoPasajero,codigoVuelo,statusFlight);
+	printf("\n");
+
+
+
 }

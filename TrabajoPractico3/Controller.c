@@ -24,9 +24,11 @@ int controller_loadFromText(char* path , LinkedList* pArrayListPassenger)
 		exit(EXIT_FAILURE);
 	}
 
-	parser_PassengerFromText(pfile,pArrayListPassenger);
+	if(parser_PassengerFromText(pfile,pArrayListPassenger) == 1){
 
-	fclose(pfile);
+		fclose(pfile);
+	}
+
 
 	return 1;
 }
@@ -88,7 +90,21 @@ int controller_removePassenger(LinkedList* pArrayListPassenger)
  */
 int controller_ListPassenger(LinkedList* pArrayListPassenger)
 {
-    return 1;
+	int retorno  = 0;
+	Passenger* passenger;
+
+	if(pArrayListPassenger != NULL){
+
+		for(int i = 0; i < ll_len(pArrayListPassenger);i++){
+
+			passenger = (Passenger*) ll_get(pArrayListPassenger,i);
+			Passenger_print(passenger);
+
+		}
+
+	}
+
+    return retorno;
 }
 
 /** \brief Ordenar pasajeros
