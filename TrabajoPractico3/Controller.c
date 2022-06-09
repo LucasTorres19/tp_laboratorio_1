@@ -102,6 +102,7 @@ int controller_ListPassenger(LinkedList* pArrayListPassenger)
 
 		}
 
+		printf("\n");
 	}
 
     return retorno;

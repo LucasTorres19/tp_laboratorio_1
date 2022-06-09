@@ -31,6 +31,7 @@ int parser_PassengerFromText(FILE* pFile , LinkedList* pArrayListPassenger)
 			if(r == 7){
 
 				passenger = Passenger_newParametros(id,nombre,apellido,price,flycode,typePassenger,StatusFlight);
+				colocarId(pArrayListPassenger,passenger);
 
 				if(passenger != NULL){
 					ll_add(pArrayListPassenger,passenger);
@@ -40,7 +41,9 @@ int parser_PassengerFromText(FILE* pFile , LinkedList* pArrayListPassenger)
 
 			//dejar de leer el archivo.
 			if(feof(pFile) != 0){
-				printf("Datos Cargados con exito.\n");
+
+				printf("\nDatos Cargados con exito.\n\n");
+
 				return 1;
 			}
 

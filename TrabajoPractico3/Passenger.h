@@ -46,5 +46,6 @@ int Passenger_setstatusflight(Passenger* this,char statusflight);
 int Passenger_getstatusflight(Passenger* this,char* statusflight);
 
 void Passenger_print(Passenger* this);
+void colocarId(LinkedList* pArrayListPassenger , Passenger* this);
 
 #endif /* PASSENGER_H_ */

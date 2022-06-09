@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "LinkedList.h"
 
 typedef struct
 {
@@ -272,5 +273,18 @@ void Passenger_print(Passenger* this){
 	printf("\n");
 
 
+
+}
+
+void colocarId(LinkedList* pArrayListPassenger , Passenger* this){
+
+	int largo;
+	int id = 1;
+
+	largo = ll_len(pArrayListPassenger);
+
+	id += largo;
+
+	Passenger_setId(this,id);
 
 }
