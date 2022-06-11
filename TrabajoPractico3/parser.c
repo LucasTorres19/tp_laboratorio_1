@@ -63,6 +63,32 @@ int parser_PassengerFromText(FILE* pFile , LinkedList* pArrayListPassenger)
  */
 int parser_PassengerFromBinary(FILE* pFile , LinkedList* pArrayListPassenger)
 {
+	int retorno =0;
+	int r;
+	Passenger* passenger;
 
-    return 1;
+	//verificamos que el archivo no sea nulo.
+	if(pFile != NULL){
+
+		while(!feof(pFile)){
+
+			//creamos un nuevo pasajero.
+			passenger = Passenger_new();
+
+			//leemos el archivo.
+			r = fread(passenger,sizeof(Passenger),1,pFile);
+			//le colocamos una id apropiada.
+			colocarId(pArrayListPassenger,passenger);
+
+			if(r != 0){
+				//lo metemos en la linked list.
+				ll_add(pArrayListPassenger,passenger);
+			}
+
+		}
+
+		retorno = 1;
+	}
+
+    return retorno;
 }

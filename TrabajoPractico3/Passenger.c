@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "LinkedList.h"
+#include "extraFunctions.h"
 
 typedef struct
 {
@@ -117,7 +118,7 @@ int Passenger_getApellido(Passenger* this,char* apellido){
 	int retorno = 0;
 
 	if(this != NULL && apellido != NULL){
-		strcpy(apellido,this->nombre);
+		strcpy(apellido,this->apellido);
 		retorno = 0;
 	}
 
@@ -287,4 +288,77 @@ void colocarId(LinkedList* pArrayListPassenger , Passenger* this){
 
 	Passenger_setId(this,id);
 
+}
+
+void Passenger_edit(Passenger* this){
+
+	char nombre[50];
+	char apellido[50];
+	char codigoVuelo[50];
+	char tipoPasajero[50];
+	char statusFlight[50];
+	float precio;
+	int auxstatusflight;
+	int auxtipo;
+
+	getString(nombre,"Ingrese el nombre del pasajero:\n","Error:ingrese nuevamente el nombre.\n");
+	getString(apellido,"Ingrese el apellido del pasajero:\n","Error:ingrese nuevamente el apellido.\n");
+	getFloat(&precio,"ingrese el precio del vuelo:\n","error:ingrese nuevamente el precio.\n",1,9999);
+	getString(codigoVuelo,"ingrese el codigo de vuelo:\n","error:ingrese nuevamente el codigo de vuelo\n");
+	getInt(&auxtipo,"ingrese el tipo de pasajero(1:EconomyClass, 2:ExecutiveClass 3:FirstClass):\n","error:ingrese nuevamente el tipo de pasajero.\n",1,3);
+	getInt(&auxstatusflight,"ingrese el estado del vuelo(1:En Vuelo , 2:En Horario ,3: Aterrizado,, 4:Demorado):\n","error:ingrese nuevamente el estado.\n",1,4);
+
+	//obtener datos.
+		switch(auxtipo){
+		case 1:
+			strcpy(tipoPasajero,"EconomyClass");
+			break;
+		case 2:
+			strcpy(tipoPasajero,"ExecutiveClass");
+			break;
+		case 3:
+			strcpy(tipoPasajero,"FirstClass");
+			break;
+		}
+
+		switch(auxstatusflight){
+			case 1:
+				strcpy(statusFlight,"En Vuelo");
+				break;
+			case 2:
+				strcpy(statusFlight,"En Horario");
+				break;
+			case 3:
+				strcpy(statusFlight,"Aterrizado");
+				break;
+			case 4:
+				strcpy(statusFlight,"Demorado");
+				break;
+			}
+
+		//cambiar los datos.
+		Passenger_setNombre(this,nombre);
+		Passenger_setApellido(this,apellido);
+		Passenger_setCodigoVuelo(this,codigoVuelo);
+		Passenger_setTipoPasajero(this,tipoPasajero);
+		Passenger_setPrecio(this,precio);
+		Passenger_setstatusflight(this,statusFlight);
+}
+
+int Passenger_SortApellido(void* passenger1 , void* passenger2){
+
+	int retorno = 0;
+	char apellido1[50], apellido2[50];
+
+	if(passenger1 !=NULL && passenger2 != NULL){
+
+		if(Passenger_getApellido(passenger1,apellido1) == 0 &&
+		   Passenger_getApellido(passenger2,apellido2) == 0){
+
+			retorno = strcmp(apellido1,apellido2);
+
+		}
+	}
+
+	return retorno;
 }

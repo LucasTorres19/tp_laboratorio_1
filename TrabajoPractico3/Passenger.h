@@ -11,9 +11,9 @@
 typedef struct
 {
 	int id;
+	float precio;
 	char nombre[50];
 	char apellido[50];
-	float precio;
 	char codigoVuelo[8];
 	char  tipoPasajero[50];
 	char statusflight[50];
@@ -45,7 +45,10 @@ int Passenger_getPrecio(Passenger* this,float* precio);
 int Passenger_setstatusflight(Passenger* this,char statusflight);
 int Passenger_getstatusflight(Passenger* this,char* statusflight);
 
+//funciones propias.
 void Passenger_print(Passenger* this);
 void colocarId(LinkedList* pArrayListPassenger , Passenger* this);
+void Passenger_edit(Passenger* this);
+int Passenger_SortApellido(void* passenger1 , void* passenger2);
 
 #endif /* PASSENGER_H_ */
