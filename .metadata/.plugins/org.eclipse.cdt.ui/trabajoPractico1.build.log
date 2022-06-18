@@ -1,10 +1,10 @@
-12:24:02 **** Rebuild of configuration Debug for project trabajoPractico1 ****
+19:36:08 **** Rebuild of configuration Debug for project trabajoPractico1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\entrada.o" "..\\src\\entrada.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funciones.o" "..\\src\\funciones.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\salida.o" "..\\src\\salida.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\entrada.o" "..\\src\\entrada.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\trabajoPractico1.o" "..\\src\\trabajoPractico1.c" 
 gcc -o trabajoPractico1.exe "src\\entrada.o" "src\\funciones.o" "src\\salida.o" "src\\trabajoPractico1.o" 
 
-12:24:05 Build Finished. 0 errors, 0 warnings. (took 3s.560ms)
+19:36:09 Build Finished. 0 errors, 0 warnings. (took 1s.679ms)
 
